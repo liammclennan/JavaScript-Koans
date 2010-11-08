@@ -1,4 +1,4 @@
-  
+
 $(document).ready(function(){
 
 	module("About Equality (topics/about_equality.js)");
@@ -15,13 +15,13 @@ $(document).ready(function(){
 		ok(3 === __, 'what is exactly equal to 3?');
 	});
 
-	test("equality with type coercsion", function() {
+	test("equality with type coercion", function() {
 		ok(3 == "__", 'what string is equal to 3, with type coercion?');
 	});
 
 	test("string literals", function() {
 		equals("frankenstein", '__', "quote types are interchangable, but must match.");
-	}); 
-	
+	});
+
 });
-  
+
