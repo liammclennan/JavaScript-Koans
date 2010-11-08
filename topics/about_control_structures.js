@@ -54,21 +54,21 @@ $(document).ready(function(){
 		equals(result, __, 'what is the value of result?');
 	});
 
-  test("switch default case", function() {
-    var result = "Pippin";
-    switch ("m") {
-      case "f":
-        result = "Frodo";
-        break;
-      case "s":
-        result = "Samwise";
-        break;
-      default:
-        result = "Merry";
-        break;
-    }
-    equals(result, __, "what is the value of result?');
-  });
+	test("switch default case", function() {
+		var result = "Pippin";
+		switch ("m") {
+			case "f":
+				result = "Frodo";
+				break;
+			case "s":
+				result = "Samwise";
+				break;
+			default:
+				result = "Merry";
+				break;
+		}
+		equals(result, __, "what is the value of result?');
+	});
 
 	test("null coallescion", function() {
 		var result = null || "a value";

@@ -23,7 +23,7 @@ $(document).ready(function(){
 		var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 		var workingWeek = daysOfWeek.splice(__, __);
 		ok(workingWeek.equalTo([__]), 'what is the value of workingWeek?');
-    ok(daysOfWeek.equalTo([__]), 'what is the value of daysOfWeek?');
+		ok(daysOfWeek.equalTo([__]), 'what is the value of daysOfWeek?');
 	});
 
 	test("stack methods", function() {
