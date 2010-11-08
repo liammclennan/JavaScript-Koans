@@ -14,6 +14,7 @@ $(document).ready(function(){
 	test("NaN", function() {
 		var resultOfFailedOperations = 7/'apple';
 		equals(isNaN(resultOfFailedOperations), __, 'what will satisfy the equals assertion?');
+    equals(resultOfFailedOperations == NaN, __, 'is NaN == NaN?');
 	});
-	
+
 });
