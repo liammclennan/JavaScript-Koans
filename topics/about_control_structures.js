@@ -18,7 +18,7 @@ $(document).ready(function(){
 		}
 		equals(counter, __, 'what is the value of counter?');
 	});
-	
+
 	test("for in", function() {
 		// this syntax will be explained in about objects
 		var person = {
@@ -32,20 +32,20 @@ $(document).ready(function(){
 		};
 		equals(result, __, 'what is the value of result?');
 	});
-	
+
 	test("ternary operator", function() {
 		var fruit = true ? "apple" : "orange";
 		equals(fruit, __, 'what is the value of fruit?');
-		
+
 		fruit = false ? "apple" : "orange";
-		equals(fruit, __, 'now what is the value of fruit?');		
+		equals(fruit, __, 'now what is the value of fruit?');
 	});
-	
+
 	test("switch", function() {
 		var result = 0;
 		switch (2) {
-			case 1: 
-				result = 1; 
+			case 1:
+				result = 1;
 				break;
 			case 1+1:
 				result = 2;
@@ -53,10 +53,26 @@ $(document).ready(function(){
 		}
 		equals(result, __, 'what is the value of result?');
 	});
-	
+
+  test("switch default case", function() {
+    var result = "Pippin";
+    switch ("m") {
+      case "f":
+        result = "Frodo";
+        break;
+      case "s":
+        result = "Samwise";
+        break;
+      default:
+        result = "Merry";
+        break;
+    }
+    equals(result, __, "what is the value of result?');
+  });
+
 	test("null coallescion", function() {
 		var result = null || "a value";
-		equals(result, __, 'what is the value of result?');	
+		equals(result, __, 'what is the value of result?');
 	});
-	
+
 });
