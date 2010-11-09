@@ -11,12 +11,13 @@ $(document).ready(function(){
 	
 	test("variables declared inside of a function", function() {
 		var outerVariable = "outer";
-		
-		var innerFunction = function() {
+
+        // this is a self-invoking function. Notice that it calls itself at the end ().
+		(function() {
 			var innerVariable = "inner";
 			equals(outerVariable, __, 'is outerVariable defined in this scope?');
 			equals(innerVariable, __, 'is innerVariable defined in this scope?');
-		};
+		})();
 		
 		equals(outerVariable, __, 'is outerVariable defined in this scope?');
 		var isInnerVariableDefined = true;
