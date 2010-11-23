@@ -9,7 +9,7 @@ $(document).ready(function(){
 	var Mammal = function(name) {
 		this.name = name;
 	}
-	// things that don't need to be set in the constructor should beadded to the constructor's prototype property.
+	// things that don't need to be set in the constructor should be added to the constructor's prototype property.
 	Mammal.prototype = {
 		sayHi: function() {
 			return "Hello, my name is " + this.name;
