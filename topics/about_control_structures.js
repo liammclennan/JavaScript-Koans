@@ -67,7 +67,7 @@ $(document).ready(function(){
 				result = "Merry";
 				break;
 		}
-		equals(result, __, "what is the value of result?');
+		equals(result, __, 'what is the value of result?');
 	});
 
 	test("null coallescion", function() {
