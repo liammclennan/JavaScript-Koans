@@ -43,7 +43,7 @@ $(document).ready(function(){
 	// helper function for inheritance. 
 	// From https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_Revisited
 	function extend(child, supertype){  
-		child.prototype.__proto__ = supertype.prototype;  
+		child.prototype = supertype.prototype;  
 	} 
 
 	// "Subclass" Mammal
