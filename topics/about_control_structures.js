@@ -8,7 +8,7 @@ $(document).ready(function(){
 		if (2 > 0) {
 			isPositive = true;
 		}
-		equals(isPositive, true,  'what is the value of isPositive?');
+		equals(isPositive, __,  'what is the value of isPositive?');
 	});
 
 	test("for", function() {
@@ -16,7 +16,7 @@ $(document).ready(function(){
 		for (var i = 1; i <= 3; i++) {
 			counter = counter + i;
 		}
-		equals(counter, 16, 'what is the value of counter?');
+		equals(counter, __, 'what is the value of counter?');
 	});
 
 	test("for in", function() {
