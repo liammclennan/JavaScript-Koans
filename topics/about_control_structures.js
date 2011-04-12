@@ -28,14 +28,14 @@ $(document).ready(function(){
 		var result = "";
 		// for in enumerates the property names of an object
 		for (property_name in person) {
-      result += property_name;
+      result = result + property_name;
 		};
 		equals(result, __, 'what is the value of result?');
 	});
 
 	test("ternary operator", function() {
 		var fruit = true ? "apple" : "orange";
-		equals(fruit, __, 'what is the value of fruit?');
+		equals(fruit, "apple", 'what is the value of fruit?');
 
 		fruit = false ? "apple" : "orange";
 		equals(fruit, __, 'now what is the value of fruit?');
