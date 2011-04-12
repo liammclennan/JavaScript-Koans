@@ -16,11 +16,11 @@ $(document).ready(function(){
 	});
 
 	test("equality with type coercion", function() {
-		ok(3 == __, 'what string is equal to 3, with type coercion?');
+		ok(3 == "__", 'what string is equal to 3, with type coercion?');
 	});
 
 	test("string literals", function() {
-		equals("frankenstein", __, "quote types are interchangable, but must match.");
+		equals("frankenstein", '__', "quote types are interchangable, but must match.");
 	});
 
 });

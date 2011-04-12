@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 	test("ternary operator", function() {
 		var fruit = true ? "apple" : "orange";
-		equals(fruit, "apple", 'what is the value of fruit?');
+		equals(fruit, __, 'what is the value of fruit?');
 
 		fruit = false ? "apple" : "orange";
 		equals(fruit, __, 'now what is the value of fruit?');
