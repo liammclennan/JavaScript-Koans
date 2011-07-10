@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 	module("About Truthyness (topics/about_truthyness.js)");
@@ -14,13 +13,13 @@ $(document).ready(function(){
 	});
 	
 	test("truthyness of zero", function() {
-		var zeroIsTrue = 0 ? true : false;
-		equals(zeroIsTrue, __, 'is 0 true?');
+		var zeroIsFalse = 0 ? true : false;
+		equals(zeroIsFalse, __, 'is 0 true?');
 	});
 
 	test("truthyness of null", function() {
-		var nullIsTrue = null ? true : false;
-		equals(nullIsTrue, __);
+		var nullIsFalse = null ? true : false;
+		equals(nullIsFalse, __);
 	});
 	
 });
