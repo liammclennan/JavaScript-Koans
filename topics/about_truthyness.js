@@ -13,12 +13,12 @@ $(document).ready(function(){
 	});
 	
 	test("truthyness of zero", function() {
-		var zeroIsTrue = 0 ? true : false;
+		var zeroIsFalse = 0 ? true : false;
 		equals(zeroIsFalse, __, 'is 0 true?');
 	});
 
 	test("truthyness of null", function() {
-		var nullIsTrue = null ? true : false;
+		var nullIsFalse = null ? true : false;
 		equals(nullIsFalse, __);
 	});
 	
