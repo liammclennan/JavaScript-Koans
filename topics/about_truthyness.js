@@ -1,25 +1,26 @@
+
 $(document).ready(function(){
 
 	module("About Truthyness (topics/about_truthyness.js)");
 
 	test("truthyness of positive numbers", function() {
-		var oneIsTrue = 1 ? true : false;
-		equals(oneIsTrue, __, 'is one true?');
+		var oneIsTruthy = 1 ? true : false;
+		equals(oneIsTruthy, __, 'is one truthy?');
 	});
 	
 	test("truthyness of negative numbers", function() {
-		var negativeOneIsTrue = -1 ? true : false;
-		equals(negativeOneIsTrue, __, 'is -1 true?');
+		var negativeOneIsTruthy = -1 ? true : false;
+		equals(negativeOneIsTruthy, __, 'is -1 truthy?');
 	});
 	
 	test("truthyness of zero", function() {
-		var zeroIsFalse = 0 ? true : false;
-		equals(zeroIsFalse, __, 'is 0 true?');
+		var zeroIsTruthy = 0 ? true : false;
+		equals(zeroIsTruthy, __, 'is 0 truthy?');
 	});
 
 	test("truthyness of null", function() {
-		var nullIsFalse = null ? true : false;
-		equals(nullIsFalse, __);
+		var nullIsTruthy = null ? true : false;
+		equals(nullIsTruthy, __, 'is null truthy?');
 	});
 	
 });
