@@ -1,4 +1,3 @@
-
 module("About Equality (topics/about_equality.js)");
 
 test("numeric equality", function() {
@@ -18,5 +17,5 @@ test("equality with type coercion", function() {
 });
 
 test("string literals", function() {
-    equals("frankenstein", '__', "quote types are interchangable, but must match.");
+    equals("frankenstein", '__', "quote types are interchangeable, but must match.");
 });
