@@ -1,4 +1,3 @@
-
 module("About Reflection (topics/about_reflection.js)");
 
 test("typeof", function() {
@@ -23,7 +22,6 @@ test("property enumeration", function() {
 test("hasOwnProperty", function() {
     // hasOwnProperty returns true if the parameter is a property directly on the object, 
     // but not if it is a property accessible via the prototype chain.
-    var result = "";
     var keys = [];
     var fruits =  ['apple', 'orange'];
     for(propertyName in fruits) {
