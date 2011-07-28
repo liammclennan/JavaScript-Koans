@@ -27,7 +27,7 @@ test("hasOwnProperty", function() {
     for(propertyName in fruits) {
         keys.push(propertyName);
     }
-    ok(keys.equalTo(['__', '__', '__']), 'what are the properties of the array?');
+    equals(['__', '__', '__'], keys, 'what are the properties of the array?')
 
     var ownKeys = [];
     for(propertyName in fruits) {
