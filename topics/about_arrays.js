@@ -17,7 +17,7 @@ test("length", function() {
     equals(collection.length, __, 'what is the length of the collection array?');
 });
 
-test("delete", function() {
+test("splice", function() {
     var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     var workingWeek = daysOfWeek.splice(__, __);
     ok(workingWeek.equalTo([__]), 'what is the value of workingWeek?');
