@@ -2,7 +2,7 @@
 module("About Asserts (topics/about_asserts.js)");
 
 test("ok", function() {
-    ok(__, 'what will satisfy the ok assertion?');
+    ok(false, 'what will satisfy the ok assertion?');
 });
 
 test("not", function() {
