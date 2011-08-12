@@ -57,7 +57,7 @@ test("using call to invoke function",function(){
     //function, and the arguments to be sent to the function,multiple arguments are separated by commas.
     var result = invokee.call("I am this!", "Where did it come from?");
         
-    equals(result,"I am this!Where did it come from?","what will the value of invokee's this be?");
+    equals(result,__,"what will the value of invokee's this be?");
 });
 
 test("using apply to invoke function",function(){
