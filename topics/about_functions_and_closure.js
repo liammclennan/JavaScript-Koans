@@ -25,12 +25,12 @@ test("self invoking functions", function() {
     (function(pv) {
         var secretValue = "password";
         equals(pv, __, 'what is the value of pv?');
-        equals(typeof(secretValue), "__", "is secret value available in this context?");
-        equals(typeof(pv), "__", "is public value available in this context?");
+        equals(typeof(secretValue), "__", "is secretValue available in this context?");
+        equals(typeof(publicValue), "__", "is publicValue available in this context?");
     })(publicValue);
 
-    equals(typeof(secretValue), "__", "is secret value available in this context?");
-    equals(typeof(publicValue), "__", "is public value available in this context?");
+    equals(typeof(secretValue), "__", "is secretValue available in this context?");
+    equals(typeof(publicValue), "__", "is publicValue available in this context?");
 });
 
 test("arguments array", function() {
