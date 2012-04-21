@@ -20,22 +20,36 @@ test("property enumeration", function() {
 });
 
 test("hasOwnProperty", function() {
-    // hasOwnProperty returns true if the parameter is a property directly on the object, 
-    // but not if it is a property accessible via the prototype chain.
+
+    var A = function() {
+        this.aprop = "A";    
+    };
+
+    var B = function() {
+        this.bprop = "B";
+    };
+
+    B.prototype = new A();
+
+    var b = new B();
+
     var keys = [];
-    var fruits =  ['apple', 'orange'];
-    for(propertyName in fruits) {
+    for (propertyName in b) {
         keys.push(propertyName);
     }
-    ok(keys.equalTo(['__', '__', '__']), 'what are the properties of the array?');
+    equals(keys.length, __, 'how many elements are in the keys array?');
+    ok(keys.equalTo([__, __]), 'what are the properties of the array?');
 
+    // hasOwnProperty returns true if the parameter is a property directly on the object, 
+    // but not if it is a property accessible via the prototype chain.
     var ownKeys = [];
-    for(propertyName in fruits) {
-        if (fruits.hasOwnProperty(propertyName)) {
+    for(propertyName in b) {
+        if (b.hasOwnProperty(propertyName)) {
             ownKeys.push(propertyName);
         }
     }
-    ok(ownKeys.equalTo(['__', '__']), 'what are the own properties of the array?');
+    equals(ownKeys.length, __, 'how many elements are in the ownKeys array?');
+    ok(ownKeys.equalTo([__, __]), 'what are the own properties of the array?');
 });
 
 test("eval", function() {
