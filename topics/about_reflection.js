@@ -1,5 +1,15 @@
 module("About Reflection (topics/about_reflection.js)");
 
+var A = function() {
+    this.aprop = "A";    
+};
+
+var B = function() {
+    this.bprop = "B";
+};
+
+B.prototype = new A();
+
 test("typeof", function() {
     equals(typeof({}), __, 'what is the type of an empty object?');
     equals(typeof('apple'), __, 'what is the type of a string?');
@@ -20,17 +30,6 @@ test("property enumeration", function() {
 });
 
 test("hasOwnProperty", function() {
-
-    var A = function() {
-        this.aprop = "A";    
-    };
-
-    var B = function() {
-        this.bprop = "B";
-    };
-
-    B.prototype = new A();
-
     var b = new B();
 
     var keys = [];
@@ -50,6 +49,14 @@ test("hasOwnProperty", function() {
     }
     equals(ownKeys.length, __, 'how many elements are in the ownKeys array?');
     ok(ownKeys.equalTo([__, __]), 'what are the own properties of the array?');
+});
+
+test("constructor property", function () {
+    var a = new A();
+    var b = new B();
+    equals(typeof(a.constructor), __, "what is the type of a's constructor?");
+    equals(a.constructor.name, __, "what is the name of a's constructor?");    
+    equals(a.constructor.name, __, "what is the name of b's constructor?");    
 });
 
 test("eval", function() {
