@@ -56,7 +56,7 @@ test("constructor property", function () {
     var b = new B();
     equals(typeof(a.constructor), __, "what is the type of a's constructor?");
     equals(a.constructor.name, __, "what is the name of a's constructor?");    
-    equals(a.constructor.name, __, "what is the name of b's constructor?");    
+    equals(b.constructor.name, __, "what is the name of b's constructor?");    
 });
 
 test("eval", function() {
