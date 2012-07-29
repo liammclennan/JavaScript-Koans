@@ -1,4 +1,3 @@
-
 module("About Control Structures (topics/about_control_structures.js)");
 
 test("if", function() {
@@ -68,7 +67,7 @@ test("switch default case", function() {
     equals(result, __, 'what is the value of result?');
 });
 
-test("null coallescion", function() {
+test("null coalescing", function() {
     var result = null || "a value";
     equals(result, __, 'what is the value of result?');
 });
