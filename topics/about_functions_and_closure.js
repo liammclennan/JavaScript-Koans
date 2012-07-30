@@ -1,4 +1,3 @@
-
 module("About Functions And Closure (topics/about_functions_and_closure.js)");
 
 test("defining functions directly", function() {
@@ -43,7 +42,7 @@ test("arguments array", function() {
     };
 
     equals(add(1,2,3,4,5), 15, "add 1,2,3,4,5");
-    equals(add(4,7,-2), 9, "add 1,2,3,4,5");
+    equals(add(4,7,-2), 9, "add 4,7,-2");
 });
 
 test("using call to invoke function",function(){
