@@ -29,6 +29,6 @@ test("stack methods", function() {
     stack.push("first");
     stack.push("second");
 
-    equals(stack.pop(), __, 'what will be the first value poped off the stack?');
-    equals(stack.pop(), __, 'what will be the second value poped off the stack?');
+    equals(stack.pop(), __, 'what will be the first value popped off the stack?');
+    equals(stack.pop(), __, 'what will be the second value popped off the stack?');
 });
