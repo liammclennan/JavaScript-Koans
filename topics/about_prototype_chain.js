@@ -26,12 +26,12 @@ child.b = 2;
  * ---------------------- ---- ---- ----
  * */
 
-test("Is there an 'a' and 'b' own property on childObj?", function () {
-  equals(child.hasOwnProperty('a'), __, 'childObj.hasOwnProperty(\'a\')?');
-  equals(child.hasOwnProperty('b'), __, 'childObj.hasOwnProperty(\'b\')?');
+test("Is there an 'a' and 'b' own property on child?", function () {
+  equals(child.hasOwnProperty('a'), __, 'child.hasOwnProperty(\'a\')?');
+  equals(child.hasOwnProperty('b'), __, 'child.hasOwnProperty(\'b\')?');
 });
 
-test("Is there an 'a' and 'b' property on childObj?", function () {
+test("Is there an 'a' and 'b' property on child?", function () {
   equals(child.a, __, 'what is \'a\' value?');
   equals(child.b, __, 'what is \'b\' value?');
 });
@@ -42,22 +42,22 @@ test("If 'b' was removed, whats b value?", function () {
 });
 
 
-test("Is there a 'c' own property on childObj?", function () {
-  equals(child.hasOwnProperty('c'), __, 'childObj.hasOwnProperty(\'c\')?');
+test("Is there a 'c' own property on child?", function () {
+  equals(child.hasOwnProperty('c'), __, 'child.hasOwnProperty(\'c\')?');
 });
 
-// Is there a 'c' own property on childObj? No, check its prototype
-// Is there a 'c' own property on childObj.[[Prototype]]? Yes, its value is...
-test("Is there a 'c' property on childObj?", function () {
-  equals(child.c, __, 'what is the value of childObj.c?');
+// Is there a 'c' own property on child? No, check its prototype
+// Is there a 'c' own property on child.[[Prototype]]? Yes, its value is...
+test("Is there a 'c' property on child?", function () {
+  equals(child.c, __, 'what is the value of child.c?');
 });
 
 
-// Is there a 'd' own property on childObj? No, check its prototype
-// Is there a 'd' own property on childObj.[[Prototype]]? No, check it prototype
-// childObj.[[Prototype]].[[Prototype]] is null, stop searching, no property found, return...
-test("Is there an 'd' property on childObj?", function () {
-  equals(child.d, __, 'what is the value of childObj.d?');
+// Is there a 'd' own property on child? No, check its prototype
+// Is there a 'd' own property on child.[[Prototype]]? No, check it prototype
+// child.[[Prototype]].[[Prototype]] is null, stop searching, no property found, return...
+test("Is there an 'd' property on child?", function () {
+  equals(child.d, __, 'what is the value of child.d?');
 });
 
 
