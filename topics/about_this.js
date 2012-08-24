@@ -12,15 +12,15 @@ test("'this' inside a method", function () {
 
 test("'this' on unattached function", function () {
 	var person = {
-		handle: 'bob',
+		name: 'bob',
 		intro: function () {
-			return "Hello, my name is " + this.handle;
+			return "Hello, my name is " + this.name;
 		} 
 	}
 
 	var alias = person.intro;
 	
-	// if the function called as an object property 'this' is the global context 
+	// if the function is not called as an object property 'this' is the global context 
 	// (window in a browser)
 	window.__ = 'Peter';
 	equals("Hello, my name is Peter", alias());
@@ -28,9 +28,9 @@ test("'this' on unattached function", function () {
 
 test("'this' set explicitly", function () {
 	var person = {
-		handle: 'bob',
+		name: 'bob',
 		intro: function () {
-			return "Hello, my name is " + this.handle;
+			return "Hello, my name is " + this.name;
 		} 
 	}
 
