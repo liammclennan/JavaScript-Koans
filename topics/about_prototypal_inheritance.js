@@ -34,7 +34,8 @@ test("calling functions added to a prototype after an object was created", funct
     Mammal.prototype.numberOfLettersInName = function() {
         return this.name.length;
     };
-    // for the following statement asks the paul object to call a function that was added to the Mammal prototype after paul was constructed.
+    // the following statement asks the paul object to call a function that was added
+    // to the Mammal prototype after paul was constructed.
     equals(paul.numberOfLettersInName(), __, "how long is Paul's name?");
 });
 
