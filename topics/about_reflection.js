@@ -37,7 +37,7 @@ test("hasOwnProperty", function() {
         keys.push(propertyName);
     }
     equals(keys.length, __, 'how many elements are in the keys array?');
-    ok(keys.equalTo([__, __]), 'what are the properties of the array?');
+    ok(keys.equalTo([__]), 'what are the properties of the array?');
 
     // hasOwnProperty returns true if the parameter is a property directly on the object, 
     // but not if it is a property accessible via the prototype chain.
