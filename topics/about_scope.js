@@ -1,4 +1,3 @@
-
 module("About Scope (topics/about_scope.js)");
 
 thisIsAGlobalVariable = 77;
@@ -18,5 +17,5 @@ test("variables declared inside of a function", function() {
     })();
 
     equals(outerVariable, __, 'is outerVariable defined in this scope?');
-    equals(typeof(innerVariable), "undefined", 'is innerVariable defined in this scope?');
+    equals(typeof(innerVariable), __, 'is innerVariable defined in this scope?');
 });
