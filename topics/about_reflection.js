@@ -1,10 +1,10 @@
 module("About Reflection (topics/about_reflection.js)");
 
-var A = function() {
+var A = function makeA() {
     this.aprop = "A";    
 };
 
-var B = function() {
+var B = function makeB() {
     this.bprop = "B";
 };
 
