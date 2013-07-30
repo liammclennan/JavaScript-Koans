@@ -21,7 +21,7 @@ test("property enumeration", function() {
     var keys = [];
     var values = [];
     var person = {name: 'Amory Blaine', age: 102, unemployed: true};
-    for(propertyName in person) {
+    for(var propertyName in person) {
         keys.push(propertyName);
         values.push(person[propertyName]);
     }
@@ -31,6 +31,7 @@ test("property enumeration", function() {
 
 test("hasOwnProperty", function() {
     var b = new B();
+    var propertyName;
 
     var keys = [];
     for (propertyName in b) {
