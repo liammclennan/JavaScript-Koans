@@ -1,4 +1,3 @@
-
 module("About Arrays (topics/about_arrays.js)");
 
 test("array literal syntax and indexing", function() {
@@ -31,4 +30,14 @@ test("stack methods", function() {
 
     equals(stack.pop(), __, 'what will be the first value popped off the stack?');
     equals(stack.pop(), __, 'what will be the second value popped off the stack?');
+});
+
+test("queue methods", function() {
+    var queue = [];
+    queue.push("first");
+    queue.push("second");
+    queue.unshift("third");
+
+    equals(queue.shift(), "__", 'what will be shifted out first?');
+    equals(queue.shift(), "__", 'what will be shifted out second?');
 });
