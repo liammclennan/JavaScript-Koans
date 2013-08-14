@@ -38,6 +38,6 @@ test("queue methods", function() {
     queue.push("second");
     queue.unshift("third");
 
-    equals(queue.shift(), "third", 'what will be shifted out first?');
-    equals(queue.shift(), "first", 'what will be shifted out second?');
+    equals(queue.shift(), "__", 'what will be shifted out first?');
+    equals(queue.shift(), "__", 'what will be shifted out second?');
 });
