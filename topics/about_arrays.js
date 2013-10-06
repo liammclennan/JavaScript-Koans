@@ -2,18 +2,18 @@ module("About Arrays (topics/about_arrays.js)");
 
 test("array literal syntax and indexing", function() {
     var favouriteThings = ["cellar door", 42, true]; // note that array elements do not have to be of the same type
-    equals(favouriteThings[0], __, 'what is in the first position of the array?');
-    equals(favouriteThings[1], __, 'what is in the second position of the array?');
-    equals(favouriteThings[2], __, 'what is in the third position of the array?');
+    equal(__, favouriteThings[0], 'what is in the first position of the array?');
+    equal(__, favouriteThings[1], 'what is in the second position of the array?');
+    equal(__, favouriteThings[2], 'what is in the third position of the array?');
 });
 
 test("array type", function() {
-    equals(typeof([]), __, 'what is the type of an array?');
+    equal(__, typeof([]), 'what is the type of an array?');
 });
 
 test("length", function() {
     var collection = ['a','b','c'];
-    equals(collection.length, __, 'what is the length of the collection array?');
+    equal(__, collection.length, 'what is the length of the collection array?');
 });
 
 test("splice", function() {
@@ -28,8 +28,8 @@ test("stack methods", function() {
     stack.push("first");
     stack.push("second");
 
-    equals(stack.pop(), __, 'what will be the first value popped off the stack?');
-    equals(stack.pop(), __, 'what will be the second value popped off the stack?');
+    equal(__, stack.pop(), 'what will be the first value popped off the stack?');
+    equal(__, stack.pop(), 'what will be the second value popped off the stack?');
 });
 
 test("queue methods", function() {
@@ -38,6 +38,6 @@ test("queue methods", function() {
     queue.push("second");
     queue.unshift("third");
 
-    equals(queue.shift(), "__", 'what will be shifted out first?');
-    equals(queue.shift(), "__", 'what will be shifted out second?');
+    equal(__, queue.shift(), 'what will be shifted out first?');
+    equal(__, queue.shift(), 'what will be shifted out second?');
 });
