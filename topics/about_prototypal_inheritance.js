@@ -21,12 +21,12 @@ test("defining a 'class'", function() {
 
 // add another function to the Mammal 'type' that uses the sayHi function
 Mammal.prototype.favouriteSaying = function() {
-    return this.name + "'s favourite saying is " + this.sayHi(); 
+    return this.name + "'s favourite saying is " + this.sayHi();
 }
 
 test("more functions", function() {
     var bobby = new Mammal("Bobby");
-    equal(__, bobby.favouriteSaying(), "what is Bobby's favourite saying?"); 
+    equal(__, bobby.favouriteSaying(), "what is Bobby's favourite saying?");
 });
 
 test("calling functions added to a prototype after an object was created", function() {
@@ -39,17 +39,17 @@ test("calling functions added to a prototype after an object was created", funct
     equal(__, paul.numberOfLettersInName(), "how long is Paul's name?");
 });
 
-// helper function for inheritance. 
+// helper function for inheritance.
 // From https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_Revisited
-function extend(child, supertype){  
-    child.prototype = supertype.prototype;  
-} 
+function extend(child, supertype){
+    child.prototype = supertype.prototype;
+}
 
 // "Subclass" Mammal
 function Bat(name, wingspan) {
     Mammal.call(this, name);
     this.wingspan = wingspan;
-}	
+}
 
 // configure inheritance
 extend(Bat, Mammal);

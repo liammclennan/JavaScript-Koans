@@ -21,7 +21,7 @@ test("dynamically adding properties", function() {
     person.__ = 102;
     equal("Amory Blaine", person.name, "what is the person's name?");
     equal(102, person.age, "what is the person's age?");
-}); 
+});
 
 test("adding properties from strings", function() {
     var person = {};
