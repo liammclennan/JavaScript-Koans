@@ -1,4 +1,3 @@
-
 module("About Regular Expressions (topics/about_regular_expressions.js)");
 
 test("exec", function() {

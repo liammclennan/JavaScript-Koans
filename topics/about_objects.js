@@ -1,4 +1,3 @@
-
 module("About Objects (topics/about_objects.js)");
 
 test("object type", function() {

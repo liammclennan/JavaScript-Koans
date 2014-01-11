@@ -1,4 +1,3 @@
-
 module("About Assignment (topics/about_assignment.js)");
 
 test("local variables", function() {

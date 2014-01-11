@@ -1,4 +1,3 @@
-
 module("About Numbers (topics/about_numbers.js)");
 
 test("types", function() {
