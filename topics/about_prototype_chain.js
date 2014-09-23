@@ -59,5 +59,3 @@ test("Is there a 'c' property on child?", function () {
 test("Is there an 'd' property on child?", function () {
   equal(__, child.d, 'what is the value of child.d?');
 });
-
-

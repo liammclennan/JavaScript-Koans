@@ -1,4 +1,3 @@
-
 module("About Asserts (topics/about_asserts.js)");
 
 test("ok", function() {

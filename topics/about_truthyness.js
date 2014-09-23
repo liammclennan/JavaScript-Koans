@@ -1,4 +1,3 @@
-
 module("About Truthyness (topics/about_truthyness.js)");
 
 test("truthyness of positive numbers", function() {

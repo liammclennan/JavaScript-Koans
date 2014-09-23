@@ -1,4 +1,3 @@
-
 module("About Equality (topics/about_equality.js)");
 
 test("numeric equality", function() {

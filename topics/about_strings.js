@@ -1,4 +1,3 @@
-
 module("About Strings (topics/about_strings.js)");
 
 test("delimiters", function() {
