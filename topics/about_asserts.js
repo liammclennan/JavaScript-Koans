@@ -1,14 +1,14 @@
 
 module("About Asserts (topics/about_asserts.js)");
 
-test("ok", function() {
+test("Asserts 1: ok", function() {
     ok(__ === true, 'what will satisfy the ok assertion?');
 });
 
-test("not ok", function() {
+test("Asserts 2: not ok", function() {
     ok(__ === false, 'what is a false value?');
 });
 
-test("equal", function() {
+test("Asserts 3: equal", function() {
     equal(__, 1 + 1, 'what will satisfy the equal assertion?');
 });
