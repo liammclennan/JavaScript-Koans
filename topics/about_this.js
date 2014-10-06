@@ -23,7 +23,7 @@ test("'this' on unattached function", function () {
 	// if the function is not called as an object property 'this' is the global context 
 	// (window in a browser). This is an example. Please do not do this in practise.
 	window.__ = 'Peter';
-	equal(alias(), "Hello, my name is Peter", "What does 'this' referer to when it is not part of an object?");
+	equal(alias(), "Hello, my name is Peter", "What does 'this' refer to when it is not part of an object?");
 });
 
 test("'this' set explicitly", function () {
@@ -36,7 +36,7 @@ test("'this' set explicitly", function () {
 
 	// calling a function with 'call' lets us assign 'this' explicitly
 	var message = person.intro.call({__: "Frank"});
-	equal(message, "Hello, my name is Frank", "What does 'this' referer to when you use the 'call()' method?");
+	equal(message, "Hello, my name is Frank", "What does 'this' refer to when you use the 'call()' method?");
 });
 
 // extra credit: underscore.js has a 'bind' function http://documentcloud.github.com/underscore/#bind
