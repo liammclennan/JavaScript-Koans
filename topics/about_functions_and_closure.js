@@ -3,7 +3,7 @@ module("About Functions And Closure (topics/about_functions_and_closure.js)");
 test("defining functions directly", function() {
   var result = "a";
   function changeResult() {
-    // the ability to access a variables defined in the same scope as the function is known as 'closure'
+    // the ability to access variables defined in the same scope as the function is known as 'closure'
     result = "b";
   }
   changeResult();
