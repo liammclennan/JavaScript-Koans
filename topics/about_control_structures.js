@@ -26,7 +26,7 @@ test("for in", function() {
 	// for in enumerates the property names of an object
 	for (var property_name in person) {
   		result = result + property_name;
-	};
+	}
 	equal(__, result, 'what is the value of result?');
 });
 
@@ -52,22 +52,22 @@ test("switch", function() {
 });
 
 test("switch default case", function() {
-    var result = "Pippin";
-    switch ("m") {
-        case "f":
-            result = "Frodo";
-            break;
-        case "s":
-            result = "Samwise";
-                break;
-        default:
-            result = "Merry";
-            break;
-    }
-    equal(__, result, 'what is the value of result?');
+  var result = "Pippin";
+  switch ("m") {
+      case "f":
+          result = "Frodo";
+          break;
+      case "s":
+          result = "Samwise";
+              break;
+      default:
+          result = "Merry";
+          break;
+  }
+  equal(__, result, 'what is the value of result?');
 });
 
 test("null coalescing", function() {
-    var result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+  var result = null || "a value";
+  equal(__, result, 'what is the value of result?');
 });
