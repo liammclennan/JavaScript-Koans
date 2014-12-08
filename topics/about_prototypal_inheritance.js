@@ -6,13 +6,13 @@ module("About Prototypal Inheritance (topics/about_prototypal_inheritance.js)");
 // this 'class' pattern defines a class by its constructor
 var Mammal = function(name) {
     this.name = name;
-}
+};
 // things that don't need to be set in the constructor should be added to the constructor's prototype property.
 Mammal.prototype = {
     sayHi: function() {
         return "Hello, my name is " + this.name;
     }
-}
+};
 
 test("defining a 'class'", function() {
     var eric  = new Mammal("Eric");
@@ -22,7 +22,7 @@ test("defining a 'class'", function() {
 // add another function to the Mammal 'type' that uses the sayHi function
 Mammal.prototype.favouriteSaying = function() {
     return this.name + "'s favourite saying is " + this.sayHi(); 
-}
+};
 
 test("more functions", function() {
     var bobby = new Mammal("Bobby");
@@ -49,7 +49,7 @@ function extend(child, supertype){
 function Bat(name, wingspan) {
     Mammal.call(this, name);
     this.wingspan = wingspan;
-}	
+}   
 
 // configure inheritance
 extend(Bat, Mammal);

@@ -5,7 +5,7 @@ test("defining functions directly", function() {
     function changeResult() {
         // the ability to access a variables defined in the same scope as the function is known as 'closure'
         result = "b";
-    };
+    }
     changeResult();
     equal(__, result, 'what is the value of result?');
 });
