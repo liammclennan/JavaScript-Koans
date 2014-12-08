@@ -6,7 +6,7 @@ test("'this' inside a method", function () {
 		intro: function () {
 			return "Hello, my name is " + this.__;
 		} 
-	}
+	};
 	equal(person.intro(), "Hello, my name is bob", "If an object has a method can you access properties inside it?");
 });
 
@@ -16,7 +16,7 @@ test("'this' on unattached function", function () {
 		intro: function () {
 			return "Hello, my name is " + this.globalName;
 		} 
-	}
+	};
 
 	var alias = person.intro;
 	
@@ -32,7 +32,7 @@ test("'this' set explicitly", function () {
 		intro: function () {
 			return "Hello, my name is " + this.name;
 		} 
-	}
+	};
 
 	// calling a function with 'call' lets us assign 'this' explicitly
 	var message = person.intro.call({__: "Frank"});
