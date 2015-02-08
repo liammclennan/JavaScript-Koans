@@ -26,7 +26,7 @@ test("for in", function() {
 	// for in enumerates the property names of an object
 	for (var property_name in person) {
   		result = result + property_name;
-	};
+	}
 	equal(__, result, 'what is the value of result?');
 });
 
