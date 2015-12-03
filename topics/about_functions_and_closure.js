@@ -67,7 +67,7 @@ test("using apply to invoke function",function(){
     
     //similar to the call function is the apply function.  Apply only has two
     //arguments:  the first is the context that this should be set to in the called
-    //function and and array of arguments to be passed into the called function.
+    //function and the second is the array of arguments to be passed into the called function.
     var result = invokee.apply("I am this!", ["I am arg1","I am arg2"]);
         
     equal(__, result, "what will the value of invokee's this be?");
