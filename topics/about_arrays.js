@@ -22,7 +22,7 @@ test("splice", function() {
     var weekend = daysOfWeek;
 
     deepEqual(workingWeek, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'what is the value of workingWeek?');
-    deepEqual(weekend, ['Saturday', 'Sunday'], 'what is the value of daysOfWeek?');
+    deepEqual(weekend, ['Saturday', 'Sunday'], 'what is the value of weekend?');
 });
 
 test("stack methods", function() {
