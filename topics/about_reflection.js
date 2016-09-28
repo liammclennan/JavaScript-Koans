@@ -1,10 +1,10 @@
 module("About Reflection (topics/about_reflection.js)");
 
-var A = function() {
-    this.aprop = "A";    
+function A() {
+    this.aprop = "A";
 };
 
-var B = function() {
+function B() {
     this.bprop = "B";
 };
 
@@ -14,7 +14,7 @@ test("typeof", function() {
     equal(__, typeof({}), 'what is the type of an empty object?');
     equal(__, typeof('apple'), 'what is the type of a string?');
     equal(__, typeof(-5), 'what is the type of -5?');
-    equal(__, typeof(false), 'what is the type of false?');		
+    equal(__, typeof(false), 'what is the type of false?');
 });
 
 test("property enumeration", function() {
@@ -40,7 +40,7 @@ test("hasOwnProperty", function() {
     equal(__, keys.length, 'how many elements are in the keys array?');
     deepEqual([__, __], keys, 'what are the properties of the array?');
 
-    // hasOwnProperty returns true if the parameter is a property directly on the object, 
+    // hasOwnProperty returns true if the parameter is a property directly on the object,
     // but not if it is a property accessible via the prototype chain.
     var ownKeys = [];
     for(propertyName in b) {
@@ -56,8 +56,8 @@ test("constructor property", function () {
     var a = new A();
     var b = new B();
     equal(__, typeof(a.constructor), "what is the type of a's constructor?");
-    equal(__, a.constructor.name, "what is the name of a's constructor?");    
-    equal(__, b.constructor.name, "what is the name of b's constructor?");    
+    equal(__, a.constructor.name, "what is the name of a's constructor?");
+    equal(__, b.constructor.name, "what is the name of b's constructor?");
 });
 
 test("eval", function() {
