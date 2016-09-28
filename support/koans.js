@@ -56,6 +56,7 @@ Array.prototype.equalTo = function(compareTo) {
 		if (failures > 0) {
 			$("#zen-help").show();
 		}
+		$("body").scrollTop($(document).height());
 	});
 
 	QUnit.log(function(result) {
