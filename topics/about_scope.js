@@ -12,6 +12,7 @@ test('variables declared inside of a function', function () {
   // this is a self-invoking function. Notice that it calls itself at the end ().
   (function () {
     var innerVariable = 'inner';
+
     equal(__, outerVariable, 'is outerVariable defined in this scope?');
     equal(__, innerVariable, 'is innerVariable defined in this scope?');
   })();

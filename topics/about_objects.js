@@ -40,7 +40,7 @@ test('adding functions', function () {
     age: 102,
     toString: function () {
         return __;  // HINT: use the 'this' keyword to refer to the person object.
-      },
+    },
   };
 
   equal('I Amory Blaine am 102 years old.', person.toString(),
