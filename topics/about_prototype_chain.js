@@ -1,11 +1,10 @@
+module('About Prototype Chain (topics/about_prototype_chain.js)');
 // demonstrate objects prototype chain
-
 // https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_and_the_prototype_chain
-module("About Prototype Chain (topics/about_prototype_chain.js)");
 
 var father = {
   b: 3,
-  c: 4
+  c: 4,
 };
 
 var child = Object.create(father);
@@ -41,7 +40,6 @@ test("If 'b' was removed, whats b value?", function () {
   equal(__, child.b, 'what is \'b\' value now?');
 });
 
-
 test("Is there a 'c' own property on child?", function () {
   equal(__, child.hasOwnProperty('c'), 'child.hasOwnProperty(\'c\')?');
 });
@@ -52,12 +50,9 @@ test("Is there a 'c' property on child?", function () {
   equal(__, child.c, 'what is the value of child.c?');
 });
 
-
 // Is there a 'd' own property on child? No, check its prototype
 // Is there a 'd' own property on child.[[Prototype]]? No, check it prototype
 // child.[[Prototype]].[[Prototype]] is null, stop searching, no property found, return...
 test("Is there an 'd' property on child?", function () {
   equal(__, child.d, 'what is the value of child.d?');
 });
-
-
