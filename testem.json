@@ -1,4 +1,4 @@
 {
   "framework": "qunit",
-  "test_page": "jskoans.htm"
+  "test_page": "jskoans.html"
 }
