@@ -20,8 +20,8 @@ test("typeof", function() {
 test("property enumeration", function() {
     var keys = [];
     var values = [];
-    var person = {name: 'Amory Blaine', age: 102, unemployed: true};
-    for(var propertyName in person) {
+    var person = { name: 'Amory Blaine', age: 102, unemployed: true };
+    for (var propertyName in person) {
         keys.push(propertyName);
         values.push(person[propertyName]);
     }
@@ -38,12 +38,12 @@ test("hasOwnProperty", function() {
         keys.push(propertyName);
     }
     equal(2, keys.length, 'how many elements are in the keys array?');
-    deepEqual([bprop, aprop], keys, 'what are the properties of the array?');
+    deepEqual(["bprop", "aprop"], keys, 'what are the properties of the array?');
 
     // hasOwnProperty returns true if the parameter is a property directly on the object,
     // but not if it is a property accessible via the prototype chain.
     var ownKeys = [];
-    for(propertyName in b) {
+    for (propertyName in b) {
         if (b.hasOwnProperty(propertyName)) {
             ownKeys.push(propertyName);
         }
@@ -52,12 +52,12 @@ test("hasOwnProperty", function() {
     deepEqual(["bprop"], ownKeys, 'what are the own properties of the array?');
 });
 
-test("constructor property", function () {
+test("constructor property", function() {
     var a = new A();
     var b = new B();
-    equal("function" , typeof(a.constructor), "what is the type of a's constructor?");
+    equal("function", typeof(a.constructor), "what is the type of a's constructor?");
     equal("A", a.constructor.name, "what is the name of a's constructor?");
-    equal("B", b.constructor.name, "what is the name of b's constructor?");
+    equal("A", b.constructor.name, "what is the name of b's constructor?");
 });
 
 test("eval", function() {
@@ -66,4 +66,3 @@ test("eval", function() {
     eval("result = 'apple' + ' ' + 'pie'");
     equal('apple pie', result, 'what is the value of result?');
 });
-
