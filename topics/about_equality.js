@@ -2,7 +2,7 @@
 module("About Equality (topics/about_equality.js)");
 
 test("numeric equality", function() {
-    equal(3 + __,  7, "");
+    equal(3 + __,  7, "concatenate the numbers");
 });
 
 test("string equality", function() {

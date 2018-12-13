@@ -21,7 +21,7 @@ test("splice", function() {
     var workingWeek = daysOfWeek.splice(__, __);
     var weekend = daysOfWeek;
 
-    deepEqual(workingWeek, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'what is the value of workingWeek?');
+    deepEqual(workingWeek, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'what is the value of working Week?');
     deepEqual(weekend, ['Saturday', 'Sunday'], 'what is the value of weekend?');
 });
 
