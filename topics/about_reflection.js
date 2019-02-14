@@ -21,7 +21,7 @@ test("property enumeration", function() {
     var keys = [];
     var values = [];
     var person = {name: 'Amory Blaine', age: 102, unemployed: true};
-    for(var propertyName in person) {
+    for (var propertyName in person) {
         keys.push(propertyName);
         values.push(person[propertyName]);
     }
@@ -43,7 +43,7 @@ test("hasOwnProperty", function() {
     // hasOwnProperty returns true if the parameter is a property directly on the object,
     // but not if it is a property accessible via the prototype chain.
     var ownKeys = [];
-    for(propertyName in b) {
+    for (propertyName in b) {
         if (b.hasOwnProperty(propertyName)) {
             ownKeys.push(propertyName);
         }

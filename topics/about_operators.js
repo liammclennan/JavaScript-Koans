@@ -12,7 +12,7 @@ test("addition", function() {
 
 test("assignment addition", function() {
   var result = 0;
-  for (var i = 0; i <=5; i++) {
+  for (var i = 0; i <= 5; i++) {
     //the code below is just like saying result = result + i; but is more concise
     result += i;
   }
