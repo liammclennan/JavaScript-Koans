@@ -46,8 +46,8 @@ test("arguments array", function() {
     equal(9, add(4,7,-2), "add 4,7,-2");
 });
 
-test("using call to invoke function",function(){
-    var invokee = function( message ){
+test("using call to invoke function", function(){
+    var invokee = function(message){
         return this + message;    
     };
     
@@ -60,8 +60,8 @@ test("using call to invoke function",function(){
     equal(__, result, "what will the value of invokee's this be?");
 });
 
-test("using apply to invoke function",function(){
-    var invokee = function( message1, message2 ){
+test("using apply to invoke function", function(){
+    var invokee = function(message1, message2){
         return this + message1 + message2;    
     };
     
