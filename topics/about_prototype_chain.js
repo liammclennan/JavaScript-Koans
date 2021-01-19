@@ -27,29 +27,29 @@ child.b = 2;
  * */
 
 test("Is there an 'a' and 'b' own property on child?", function () {
-  equal(__, child.hasOwnProperty('a'), 'child.hasOwnProperty(\'a\')?');
-  equal(__, child.hasOwnProperty('b'), 'child.hasOwnProperty(\'b\')?');
+  equal(true, child.hasOwnProperty('a'), 'child.hasOwnProperty(\'a\')?');
+  equal(true, child.hasOwnProperty('b'), 'child.hasOwnProperty(\'b\')?');
 });
 
 test("Is there an 'a' and 'b' property on child?", function () {
-  equal(__, child.a, 'what is \'a\' value?');
-  equal(__, child.b, 'what is \'b\' value?');
+  equal(1, child.a, 'what is \'a\' value?');
+  equal(2, child.b, 'what is \'b\' value?');
 });
 
 test("If 'b' was removed, whats b value?", function () {
   delete child.b;
-  equal(__, child.b, 'what is \'b\' value now?');
+  equal(3, child.b, 'what is \'b\' value now?');
 });
 
 
 test("Is there a 'c' own property on child?", function () {
-  equal(__, child.hasOwnProperty('c'), 'child.hasOwnProperty(\'c\')?');
+  equal(false, child.hasOwnProperty('c'), 'child.hasOwnProperty(\'c\')?');
 });
 
 // Is there a 'c' own property on child? No, check its prototype
 // Is there a 'c' own property on child.[[Prototype]]? Yes, its value is...
 test("Is there a 'c' property on child?", function () {
-  equal(__, child.c, 'what is the value of child.c?');
+  equal(4, child.c, 'what is the value of child.c?');
 });
 
 
@@ -57,7 +57,7 @@ test("Is there a 'c' property on child?", function () {
 // Is there a 'd' own property on child.[[Prototype]]? No, check it prototype
 // child.[[Prototype]].[[Prototype]] is null, stop searching, no property found, return...
 test("Is there an 'd' property on child?", function () {
-  equal(__, child.d, 'what is the value of child.d?');
+  equal(undefined, child.d, 'what is the value of child.d?');
 });
 
 
