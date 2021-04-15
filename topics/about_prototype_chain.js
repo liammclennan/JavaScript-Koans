@@ -57,7 +57,7 @@ test("Is there a 'c' property on child?", function () {
 // Is there a 'd' own property on child.[[Prototype]]? No, check it prototype
 // child.[[Prototype]].[[Prototype]] is null, stop searching, no property found, return...
 test("Is there an 'd' property on child?", function () {
-  equal("undefined", child.d, 'what is the value of child.d?');
+  equal(undefined, child.d, 'what is the value of child.d?');
 });
 
 
