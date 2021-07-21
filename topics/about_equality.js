@@ -1,23 +1,23 @@
-module("About Equality (topics/about_equality.js)");
+QUnit.module("About Equality (topics/about_equality.js)");
 
-test("numeric equality", function () {
-    equal(3 + __, 7, "what happens when you add two numbers?");
+QUnit.test("numeric equality", (assert) => {
+    assert.equal(3 + __, 7, "what happens when you add two numbers?");
 });
 
-test("string equality", function () {
-    equal("3" + __, "37", "what happens when you add two strings?");
+QUnit.test("string equality", (assert) => {
+    assert.equal("3" + __, "37", "what happens when you add two strings?");
 });
 
-test("equality without type coercion", function () {
-    ok(3 === __, "what is exactly equal to 3?");
+QUnit.test("equality without type coercion", (assert) => {
+    assert.ok(3 === __, "what is exactly equal to 3?");
 });
 
-test("equality with type coercion", function () {
+QUnit.test("equality with type coercion", (assert) => {
     // You answer must be a string to be zen
-    ok(3 == "__", "what string is equal to 3, with type coercion?");
+    assert.ok(3 == "__", "what string is equal to 3, with type coercion?");
 });
 
-test("string literals", function () {
-    equal(__, "frankenstein", "quote types are interchangeable, but must match.");
-    equal(__, 'frankenstein', "quote types can use both single and double quotes.");
+QUnit.test("string literals", (assert) => {
+    assert.equal(__, "frankenstein", "quote types are interchangeable, but must match.");
+    assert.equal(__, 'frankenstein', "quote types can use both single and double quotes.");
 });

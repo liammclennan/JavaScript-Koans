@@ -1,21 +1,21 @@
-module("About Truthyness (topics/about_truthyness.js)");
+QUnit.module("About Truthyness (topics/about_truthyness.js)");
 
-test("truthyness of positive numbers", function () {
+QUnit.test("truthyness of positive numbers", (assert) => {
     var oneIsTruthy = 1 ? true : false;
-    equal(__, oneIsTruthy, "is one truthy?");
+    assert.equal(__, oneIsTruthy, "is one truthy?");
 });
 
-test("truthyness of negative numbers", function () {
+QUnit.test("truthyness of negative numbers", (assert) => {
     var negativeOneIsTruthy = -1 ? true : false;
-    equal(__, negativeOneIsTruthy, "is -1 truthy?");
+    assert.equal(__, negativeOneIsTruthy, "is -1 truthy?");
 });
 
-test("truthyness of zero", function () {
+QUnit.test("truthyness of zero", (assert) => {
     var zeroIsTruthy = 0 ? true : false;
-    equal(__, zeroIsTruthy, "is 0 truthy?");
+    assert.equal(__, zeroIsTruthy, "is 0 truthy?");
 });
 
-test("truthyness of null", function () {
+QUnit.test("truthyness of null", (assert) => {
     var nullIsTruthy = null ? true : false;
-    equal(__, nullIsTruthy, "is null truthy?");
+    assert.equal(__, nullIsTruthy, "is null truthy?");
 });

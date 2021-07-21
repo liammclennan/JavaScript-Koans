@@ -1,36 +1,36 @@
-module("About Objects (topics/about_objects.js)");
+QUnit.module("About Objects (topics/about_objects.js)");
 
-test("object type", function () {
+QUnit.test("object type", (assert) => {
     var empty_object = {};
-    equal(__, typeof empty_object, "what is the type of an object?");
+    assert.equal(__, typeof empty_object, "what is the type of an object?");
 });
 
-test("object literal notation", function () {
+QUnit.test("object literal notation", (assert) => {
     var person = {
         __: __,
         __: __,     // Trailing commas https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
     };
-    equal("Amory Blaine", person.name, "what is the person's name?");
-    equal(102, person.age, "what is the person's age?");
+    assert.equal("Amory Blaine", person.name, "what is the person's name?");
+    assert.equal(102, person.age, "what is the person's age?");
 });
 
-test("dynamically adding properties", function () {
+QUnit.test("dynamically adding properties", (assert) => {
     var person = {};
     person.__ = "Amory Blaine";
     person.__ = 102;
-    equal("Amory Blaine", person.name, "what is the person's name?");
-    equal(102, person.age, "what is the person's age?");
+    assert.equal("Amory Blaine", person.name, "what is the person's name?");
+    assert.equal(102, person.age, "what is the person's age?");
 });
 
-test("adding properties from strings", function () {
+QUnit.test("adding properties from strings", (assert) => {
     var person = {};
     person[__] = "Amory Blaine";
     person[__] = 102;
-    equal("Amory Blaine", person.name, "what is the person's name?");
-    equal(102, person.age, "what is the person's age?");
+    assert.equal("Amory Blaine", person.name, "what is the person's name?");
+    assert.equal(102, person.age, "what is the person's age?");
 });
 
-test("adding functions", function () {
+QUnit.test("adding functions", (assert) => {
     var person = {
         name: "Amory Blaine",
         age: 102,
@@ -38,5 +38,5 @@ test("adding functions", function () {
             return __; // HINT: use the `this` keyword to refer to the person object.
         },
     };
-    equal("I Amory Blaine am 102 years old.", person.toString(), "what should the `toString` function be?");
+    assert.equal("I Amory Blaine am 102 years old.", person.toString(), "what should the `toString` function be?");
 });
