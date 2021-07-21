@@ -1,34 +1,34 @@
+QUnit.module("About Strings (topics/about_strings.js)");
 
-module("About Strings (topics/about_strings.js)");
-
-test("delimiters", function() {
+QUnit.test("delimiters", (assert) => {
     var singleQuotedString = 'apple';
     var doubleQuotedString = "apple";
-    equal(__, singleQuotedString === doubleQuotedString, 'are the two strings equal?');
+    assert.equal(__, singleQuotedString === doubleQuotedString, "are the two strings equal?");
 });
 
-test("concatenation", function() {
+QUnit.test("concatenation", (assert) => {
     var fruit = "apple";
     var dish = "pie";
-    equal(__, fruit + " " + dish, 'what is the value of fruit + " " + dish?');
+    assert.equal(__, fruit + " " + dish, 'what is the value of `fruit + " " + dish`?');
 });
 
-test("character Type", function() {
-    var characterType = typeof("Amory".charAt(1)); // typeof will be explained in about reflection
-    equal(__, characterType, 'Javascript has no character type');
+QUnit.test("character Type", (assert) => {
+    var characterType = typeof "Amory".charAt(1); // typeof will be explained in "about reflection"
+    assert.equal(__, characterType, "if Javascript has no character type, what is this type?");
 });
 
-test("escape character", function() {
-    var stringWithAnEscapedCharacter  = "\u0041pple";
-    equal(__, stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
+QUnit.test("escape character", (assert) => {
+    // Escape sequence using an Unicode code point https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences
+    var stringWithAnEscapedCharacter = "\u0041pple";
+    assert.equal(__, stringWithAnEscapedCharacter, "what is the value of `stringWithAnEscapedCharacter`?");
 });
 
-test("string.length", function() {
+QUnit.test("string.length", (assert) => {
     var fruit = "apple";
-    equal(__, fruit.length, 'what is the value of fruit.length?');
+    assert.equal(__, fruit.length, "what is the value of `fruit.length`?");
 });
 
-test("slice", function() {
+QUnit.test("slice", (assert) => {
     var fruit = "apple pie";
-    equal(__, fruit.slice(0,5), 'what is the value of fruit.slice(0,5)?');
+    assert.equal(__, fruit.slice(0, 5), "what is the value of `fruit.slice(0,5)`?");
 });

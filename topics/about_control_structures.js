@@ -1,57 +1,58 @@
-module("About Control Structures (topics/about_control_structures.js)");
+QUnit.module("About Control Structures (topics/about_control_structures.js)");
 
-test("if", function() {
-	var isPositive = false;
-	if (2 > 0) {
-		isPositive = true;
-	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+QUnit.test("if", (assert) => {
+    var isPositive = false;
+    if (2 > 0) {
+        isPositive = true;
+    }
+    assert.equal(__, isPositive, "what is the value of `isPositive`?");
 });
 
-test("for", function() {
-	var counter = 10;
-	for (var i = 1; i <= 3; i++) {
-		counter = counter + i;
-	}
-	equal(__, counter, 'what is the value of counter?');
+QUnit.test("for", (assert) => {
+    var counter = 10;
+    for (var i = 1; i <= 3; i++) {
+        counter = counter + i;
+    }
+    assert.equal(__, counter, "what is the value of `counter`?");
 });
 
-test("for in", function() {
-	// this syntax will be explained in about objects
-	var person = {
-		name: "Amory Blaine",
-		age: 102
-	};
-	var result = "";
-	// for in enumerates the property names of an object
-	for (var property_name in person) {
-  		result = result + property_name;
-	}
-	equal(__, result, 'what is the value of result?');
+QUnit.test("for...in", (assert) => {
+    // This syntax will be explained in "about objects"
+    var person = {
+        name: "Amory Blaine",
+        age: 102,
+    };
+
+    var result = "";
+    // `for...in` enumerates the property names of an object
+    for (var property_name in person) {
+        result = result + property_name;
+    }
+    assert.equal(__, result, "what is the value of `result`?");
 });
 
-test("ternary operator", function() {
-	var fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+QUnit.test("ternary operator", (assert) => {
+    var fruit = true ? "apple" : "orange";
+    assert.equal(__, fruit, "what is the value of `fruit`?");
 
-	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+    fruit = false ? "apple" : "orange";
+    assert.equal(__, fruit, "now what is the value of `fruit`?");
 });
 
-test("switch", function() {
-	var result = 0;
-	switch (2) {
-		case 1:
-			result = 1;
-			break;
-		case 1+1:
-			result = 2;
-			break;
-	}
-	equal(__, result, 'what is the value of result?');
+QUnit.test("switch", (assert) => {
+    var result = 0;
+    switch (2) {
+        case 1:
+            result = 1;
+            break;
+        case 1 + 1:
+            result = 2;
+            break;
+    }
+    assert.equal(__, result, "what is the value of `result`?");
 });
 
-test("switch default case", function() {
+QUnit.test("switch default case", (assert) => {
     var result = "Pippin";
     switch ("m") {
         case "f":
@@ -59,15 +60,15 @@ test("switch default case", function() {
             break;
         case "s":
             result = "Samwise";
-                break;
+            break;
         default:
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
+    assert.equal(__, result, "what is the value of `result`?");
 });
 
-test("null coalescing", function() {
+QUnit.test("null coalescing", (assert) => {
     var result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+    assert.equal(__, result, "what is the value of `result`?");
 });
