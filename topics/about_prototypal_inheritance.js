@@ -16,7 +16,7 @@ Mammal.prototype = {
 
 test("defining a 'class'", function() {
     var eric  = new Mammal("Eric");
-    equal(__, eric.sayHi(), 'what will Eric say?');
+    equal("Hello, my name is Eric", eric.sayHi(), 'what will Eric say?');
 });
 
 // add another function to the Mammal 'type' that uses the sayHi function
@@ -26,7 +26,7 @@ Mammal.prototype.favouriteSaying = function() {
 
 test("more functions", function() {
     var bobby = new Mammal("Bobby");
-    equal(__, bobby.favouriteSaying(), "what is Bobby's favourite saying?"); 
+    equal("Bobby's favourite saying is Hello, my name is Bobby", bobby.favouriteSaying(), "what is Bobby's favourite saying?"); 
 });
 
 test("calling functions added to a prototype after an object was created", function() {
@@ -36,7 +36,7 @@ test("calling functions added to a prototype after an object was created", funct
     };
     // the following statement asks the paul object to call a function that was added
     // to the Mammal prototype after paul was constructed.
-    equal(__, paul.numberOfLettersInName(), "how long is Paul's name?");
+    equal(4, paul.numberOfLettersInName(), "how long is Paul's name?");
 });
 
 // helper function for inheritance. 
@@ -56,6 +56,6 @@ extend(Bat, Mammal);
 
 test("Inheritance", function() {
     var lenny = new Bat("Lenny", "1.5m");
-    equal(__, lenny.sayHi(), "what does Lenny say?");
-    equal(__, lenny.wingspan, "what is Lenny's wingspan?");
+    equal("Hello, my name is Lenny", lenny.sayHi(), "what does Lenny say?");
+    equal("1.5m", lenny.wingspan, "what is Lenny's wingspan?");
 });
